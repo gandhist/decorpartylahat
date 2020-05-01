@@ -1,0 +1,144 @@
+1588342757a:1:{s:10:"kontak.htm";a:9:{s:8:"fileName";s:10:"kontak.htm";s:7:"content";s:3287:"title = "Kontak"
+url = "/kontak"
+layout = "default"
+is_hidden = 0
+==
+{% put styles %}
+    <link href="{{ 'assets/css/contact.css'|theme }}" rel="stylesheet" />
+{% endput %}
+
+  <!-- <div class="site-section" data-aos="fade"> -->
+    <!-- <div class="container-fluid"> -->
+      
+     <!--  <div class="row justify-content-center"> -->
+
+          <div style="background: url('./themes/dpl/assets/images/contact_us/blue-figurines-.jpg')" class="page-holder bg-cover">
+              <div class="container py-12">
+                  <header class="text-center text-white">
+                  
+                    <img src="{{ 'assets/images/contact_us/logo.jpeg' | theme }}" class="rounded-circle" />
+                    <h1 style="color: black; 
+                letter-spacing: 5px;
+                opacity: 0.9;
+                    " class="display-4 font-weight-bold mb-4">Decor Party Lahat</h1><code class="bg-white px-2 rounded">@decorpartylahat</code>
+                    
+                  </header>
+                  
+                  <div class="container">
+                    <div class="row">
+            
+                        <div class="cards-list">
+                            
+                            <div class="card 3">
+                                
+                              <div class="card_image">
+                                <img src="{{ 'assets/images/contact_us/giphy_1.gif'|theme }}" />
+                              </div>
+                              <div class="card_title title-white">
+                                <a href="https://wa.me/6281240353913?text=Saya%20mau%20pesan%20dekorasi%20dong"><p>Rosmalia</p></a>
+                              </div>
+                            </div>
+                              
+                            <div class="card 4">
+                            <div class="card_image">
+                              <img src="{{ 'assets/images/contact_us/mountain.jpg' | theme }}" />
+                              </div>
+                            <div class="card_title title-white">
+                              <a href="https://wa.me/6282186532001?text=Saya%20mau%20pesan%20dekorasi%20dong"><p>Ketek</p></a>
+                            </div>
+                            </div>
+            
+                            <div class="card 1">
+                              <div class="card_image"> 
+                              <img src="{{ 'assets/images/contact_us/b3esnz5ra34y.jpg' |theme}}" /> </div>
+                              <div class="card_title title-white">
+                                <a href="https://wa.me/6282281006580?text=Saya%20mau%20pesan%20dekorasi%20dong"><p>Ridho</p></a>
+                              </div>
+                            </div>
+                            
+                        </div> 
+                        {#card list#}
+                                  
+                    </div> 
+                    {#row#}
+                  </div>
+                  {#container#}
+                
+              </div>
+              {#container py2#}
+          </div>
+          {#background image#}
+
+      <!-- </div> -->
+      {#justify content center#}
+    <!-- </div> -->
+ <!--  </div> -->";s:5:"mtime";i:1588322465;s:6:"markup";s:3213:"{% put styles %}
+    <link href="{{ 'assets/css/contact.css'|theme }}" rel="stylesheet" />
+{% endput %}
+
+  <!-- <div class="site-section" data-aos="fade"> -->
+    <!-- <div class="container-fluid"> -->
+      
+     <!--  <div class="row justify-content-center"> -->
+
+          <div style="background: url('./themes/dpl/assets/images/contact_us/blue-figurines-.jpg')" class="page-holder bg-cover">
+              <div class="container py-12">
+                  <header class="text-center text-white">
+                  
+                    <img src="{{ 'assets/images/contact_us/logo.jpeg' | theme }}" class="rounded-circle" />
+                    <h1 style="color: black; 
+                letter-spacing: 5px;
+                opacity: 0.9;
+                    " class="display-4 font-weight-bold mb-4">Decor Party Lahat</h1><code class="bg-white px-2 rounded">@decorpartylahat</code>
+                    
+                  </header>
+                  
+                  <div class="container">
+                    <div class="row">
+            
+                        <div class="cards-list">
+                            
+                            <div class="card 3">
+                                
+                              <div class="card_image">
+                                <img src="{{ 'assets/images/contact_us/giphy_1.gif'|theme }}" />
+                              </div>
+                              <div class="card_title title-white">
+                                <a href="https://wa.me/6281240353913?text=Saya%20mau%20pesan%20dekorasi%20dong"><p>Rosmalia</p></a>
+                              </div>
+                            </div>
+                              
+                            <div class="card 4">
+                            <div class="card_image">
+                              <img src="{{ 'assets/images/contact_us/mountain.jpg' | theme }}" />
+                              </div>
+                            <div class="card_title title-white">
+                              <a href="https://wa.me/6282186532001?text=Saya%20mau%20pesan%20dekorasi%20dong"><p>Ketek</p></a>
+                            </div>
+                            </div>
+            
+                            <div class="card 1">
+                              <div class="card_image"> 
+                              <img src="{{ 'assets/images/contact_us/b3esnz5ra34y.jpg' |theme}}" /> </div>
+                              <div class="card_title title-white">
+                                <a href="https://wa.me/6282281006580?text=Saya%20mau%20pesan%20dekorasi%20dong"><p>Ridho</p></a>
+                              </div>
+                            </div>
+                            
+                        </div> 
+                        {#card list#}
+                                  
+                    </div> 
+                    {#row#}
+                  </div>
+                  {#container#}
+                
+              </div>
+              {#container py2#}
+          </div>
+          {#background image#}
+
+      <!-- </div> -->
+      {#justify content center#}
+    <!-- </div> -->
+ <!--  </div> -->";s:4:"code";N;s:5:"title";s:6:"Kontak";s:3:"url";s:7:"/kontak";s:6:"layout";s:7:"default";s:9:"is_hidden";s:1:"0";}}

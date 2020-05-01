@@ -1,0 +1,217 @@
+1588342757a:1:{s:11:"default.htm";a:6:{s:8:"fileName";s:11:"default.htm";s:7:"content";s:4746:"description = "Default layout DPL"
+==
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Decor Party Lahat- {{ this.page.title }}</title>
+        <meta name="description" content="{{ this.page.meta_description }}">
+        <meta name="title" content="{{ this.page.meta_title }}">
+        <meta name="author" content="Gandhi Saputra">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="generator" content="Gandhi Saputra">
+        <link rel="icon" type="image/png" href="{{ 'assets/images/october.png'|theme }}">
+        <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300i,400,700" rel="stylesheet">
+        <link rel="stylesheet" href="{{ 'assets/fonts/icomoon/style.css'|theme }}">
+    
+        <link rel="stylesheet" href="{{ 'assets/css/bootstrap.min.css'|theme }}">
+        <link rel="stylesheet" href="{{ 'assets/css/magnific-popup.css'|theme }}">
+        <link rel="stylesheet" href="{{ 'assets/css/jquery-ui.css'|theme }}">
+        <link rel="stylesheet" href="{{ 'assets/css/owl.carousel.min.css'|theme }}">
+        <link rel="stylesheet" href="{{ 'assets/css/owl.theme.default.min.css'|theme }}">
+    
+        <link rel="stylesheet" href="{{ 'assets/css/lightgallery.min.css'|theme }}">    
+        
+        <link rel="stylesheet" href="{{ 'assets/css/bootstrap-datepicker.css'|theme }}">
+    
+        <link rel="stylesheet" href="{{ 'assets/fonts/flaticon/font/flaticon.css'|theme }}">
+        
+        <link rel="stylesheet" href="{{ 'assets/css/swiper.css'|theme }}">
+    
+        <link rel="stylesheet" href="{{ 'assets/css/aos.css'|theme }}">
+    
+        <link rel="stylesheet" href="{{ 'assets/css/style.css'|theme }}">
+        {% styles %}
+    </head>
+    <body>
+
+        <!-- Header -->
+        <header id="layout-header">
+            {% partial 'header' %}
+        </header>
+
+        <!-- Content -->
+        <section id="layout-content">
+            {% page %}
+        </section>
+
+        <!-- Footer -->
+        <footer id="layout-footer">
+            {% partial 'footer' %}
+        </footer>
+
+        <!-- Scripts -->
+        <script src="{{ 'assets/js/jquery-3.3.1.min.js'|theme }}"></script>
+        <script src="{{ 'assets/js/jquery-migrate-3.0.1.min.js'|theme }}"></script>
+        <script src="{{ 'assets/js/jquery-ui.js'|theme }}"></script>
+        <script src="{{ 'assets/js/popper.min.js'|theme }}"></script>
+        <script src="{{ 'assets/js/bootstrap.min.js'|theme }}"></script>
+        <script src="{{ 'assets/js/owl.carousel.min.js'|theme }}"></script>
+        <script src="{{ 'assets/js/jquery.stellar.min.js'|theme }}"></script>
+        <script src="{{ 'assets/js/jquery.countdown.min.js'|theme }}"></script>
+        <script src="{{ 'assets/js/jquery.magnific-popup.min.js'|theme }}"></script>
+        <script src="{{ 'assets/js/bootstrap-datepicker.min.js'|theme }}"></script>
+        <script src="{{ 'assets/js/swiper.min.js'|theme }}"></script>
+        <script src="{{ 'assets/js/aos.js'|theme }}"></script>
+      
+        <script src="{{ 'assets/js/picturefill.min.js'|theme }}"></script>
+        <script src="{{ 'assets/js/lightgallery-all.min.js'|theme }}"></script>
+        <script src="{{ 'assets/js/jquery.mousewheel.min.js'|theme }}"></script>
+      
+        <script src="{{ 'assets/js/main.js'|theme }}"></script>
+        
+        <script>
+          $(document).ready(function(){
+            $('#lightgallery').lightGallery();
+            
+            /** add active class and stay opened when selected */
+        var host = window.location.origin;
+        var single_sub = window.location;
+        var link = window.location.pathname;
+        var url = link.slice(0, link.lastIndexOf('/'));
+        // for sidebar menu entirely but not cover treeview
+        var a = url.split('/');
+        var b = link.split('/');
+        /*if ($.isNumeric([2])) {
+            var last = a[2].replace(/\d+/, '');
+            var numberic_url = host + '/' + a[1]
+        } else {
+            var numberic_url = host + '/' + a[1] + '/' + a[2];
+        }*/
+        
+        if(b[2] == '') {
+            $('ul.site-menu a').filter(function() {
+                return this.href == host + url + b[2] || this.href == single_sub;
+            }).parent().addClass('active');
+            
+        }
+        else {
+            $('ul.site-menu a').filter(function() {
+                return this.href == host + url + b[2] || this.href == single_sub;
+            }).parent().addClass('active');
+    
+          }
+              });
+        </script>
+        {% framework extras %}
+        {% scripts %}
+
+    </body>
+</html>";s:5:"mtime";i:1588323854;s:6:"markup";s:4706:"<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Decor Party Lahat- {{ this.page.title }}</title>
+        <meta name="description" content="{{ this.page.meta_description }}">
+        <meta name="title" content="{{ this.page.meta_title }}">
+        <meta name="author" content="Gandhi Saputra">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="generator" content="Gandhi Saputra">
+        <link rel="icon" type="image/png" href="{{ 'assets/images/october.png'|theme }}">
+        <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300i,400,700" rel="stylesheet">
+        <link rel="stylesheet" href="{{ 'assets/fonts/icomoon/style.css'|theme }}">
+    
+        <link rel="stylesheet" href="{{ 'assets/css/bootstrap.min.css'|theme }}">
+        <link rel="stylesheet" href="{{ 'assets/css/magnific-popup.css'|theme }}">
+        <link rel="stylesheet" href="{{ 'assets/css/jquery-ui.css'|theme }}">
+        <link rel="stylesheet" href="{{ 'assets/css/owl.carousel.min.css'|theme }}">
+        <link rel="stylesheet" href="{{ 'assets/css/owl.theme.default.min.css'|theme }}">
+    
+        <link rel="stylesheet" href="{{ 'assets/css/lightgallery.min.css'|theme }}">    
+        
+        <link rel="stylesheet" href="{{ 'assets/css/bootstrap-datepicker.css'|theme }}">
+    
+        <link rel="stylesheet" href="{{ 'assets/fonts/flaticon/font/flaticon.css'|theme }}">
+        
+        <link rel="stylesheet" href="{{ 'assets/css/swiper.css'|theme }}">
+    
+        <link rel="stylesheet" href="{{ 'assets/css/aos.css'|theme }}">
+    
+        <link rel="stylesheet" href="{{ 'assets/css/style.css'|theme }}">
+        {% styles %}
+    </head>
+    <body>
+
+        <!-- Header -->
+        <header id="layout-header">
+            {% partial 'header' %}
+        </header>
+
+        <!-- Content -->
+        <section id="layout-content">
+            {% page %}
+        </section>
+
+        <!-- Footer -->
+        <footer id="layout-footer">
+            {% partial 'footer' %}
+        </footer>
+
+        <!-- Scripts -->
+        <script src="{{ 'assets/js/jquery-3.3.1.min.js'|theme }}"></script>
+        <script src="{{ 'assets/js/jquery-migrate-3.0.1.min.js'|theme }}"></script>
+        <script src="{{ 'assets/js/jquery-ui.js'|theme }}"></script>
+        <script src="{{ 'assets/js/popper.min.js'|theme }}"></script>
+        <script src="{{ 'assets/js/bootstrap.min.js'|theme }}"></script>
+        <script src="{{ 'assets/js/owl.carousel.min.js'|theme }}"></script>
+        <script src="{{ 'assets/js/jquery.stellar.min.js'|theme }}"></script>
+        <script src="{{ 'assets/js/jquery.countdown.min.js'|theme }}"></script>
+        <script src="{{ 'assets/js/jquery.magnific-popup.min.js'|theme }}"></script>
+        <script src="{{ 'assets/js/bootstrap-datepicker.min.js'|theme }}"></script>
+        <script src="{{ 'assets/js/swiper.min.js'|theme }}"></script>
+        <script src="{{ 'assets/js/aos.js'|theme }}"></script>
+      
+        <script src="{{ 'assets/js/picturefill.min.js'|theme }}"></script>
+        <script src="{{ 'assets/js/lightgallery-all.min.js'|theme }}"></script>
+        <script src="{{ 'assets/js/jquery.mousewheel.min.js'|theme }}"></script>
+      
+        <script src="{{ 'assets/js/main.js'|theme }}"></script>
+        
+        <script>
+          $(document).ready(function(){
+            $('#lightgallery').lightGallery();
+            
+            /** add active class and stay opened when selected */
+        var host = window.location.origin;
+        var single_sub = window.location;
+        var link = window.location.pathname;
+        var url = link.slice(0, link.lastIndexOf('/'));
+        // for sidebar menu entirely but not cover treeview
+        var a = url.split('/');
+        var b = link.split('/');
+        /*if ($.isNumeric([2])) {
+            var last = a[2].replace(/\d+/, '');
+            var numberic_url = host + '/' + a[1]
+        } else {
+            var numberic_url = host + '/' + a[1] + '/' + a[2];
+        }*/
+        
+        if(b[2] == '') {
+            $('ul.site-menu a').filter(function() {
+                return this.href == host + url + b[2] || this.href == single_sub;
+            }).parent().addClass('active');
+            
+        }
+        else {
+            $('ul.site-menu a').filter(function() {
+                return this.href == host + url + b[2] || this.href == single_sub;
+            }).parent().addClass('active');
+    
+          }
+              });
+        </script>
+        {% framework extras %}
+        {% scripts %}
+
+    </body>
+</html>";s:4:"code";N;s:11:"description";s:18:"Default layout DPL";}}

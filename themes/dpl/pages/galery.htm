@@ -1,0 +1,50 @@
+title = "Galery"
+url = "/galery/:slug"
+layout = "default"
+is_hidden = 0
+==
+<?php
+use Raviraj\Rjgallery\Models\Category;
+function onStart(){
+ $this['slug'] = $this->param('slug'); 
+ $this['categories'] = Category::where('slug', $this['slug'])->get();
+}
+?>
+==
+<div class="site-section"  data-aos="fade">
+    <div class="container-fluid">
+      
+      <div class="row justify-content-center">
+        
+        <div class="col-md-7">
+          <div class="row mb-5">
+            <div class="col-12 ">
+              <h2 class="site-section-heading text-center">Gallery {{ categories[0].name }} </h2>
+            </div>
+          </div>
+        </div>
+    
+      </div>
+      <div class="row" id="lightgallery">
+      {% for cat in categories %}
+                
+                    {% for img in cat.galeries %}
+                        {% for image in img.images %}
+                               <div class="col-sm-6 col-md-4 col-lg-3 col-xl-2 item" data-aos="fade" data-src="{{image.path}}" data-sub-html="
+                               <h4>{{ img.name }}</h4>
+                               <p>{{ img.description }}</p>">
+                                  <a href="#"><img src="{{image.path}}" alt="{{ img.name }}" class="img-fluid"></a>
+                                </div>
+                        {% endfor %}
+                    {% endfor %}
+                            
+        {% endfor %}
+        
+     <!--    <div class="col-sm-6 col-md-4 col-lg-3 col-xl-2 item" data-aos="fade" data-src="{{ 'assets/images/big-images/nature_big_1.jpg' | theme}}" data-sub-html="<h4>Fading Light</h4><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor doloremque hic excepturi fugit, sunt impedit fuga tempora, ad amet aliquid?</p>">
+       <a href="#"><img src="{{ 'assets/images/nature_small_1.jpg' | theme}}" alt="IMage" class="img-fluid"></a>
+     </div>
+     -->
+
+      </div>
+    </div>
+  </div>

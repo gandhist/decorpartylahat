@@ -1,0 +1,93 @@
+title = "Tentang Decor Party Lahat"
+url = "/tentang"
+layout = "default"
+is_hidden = 0
+==
+<?php
+use Raviraj\Rjgallery\Models\Category;
+use  RainLab\Blog\Models\Category as Blog;
+function onStart(){
+    $this['cats'] = Category::where('slug','team')->get();
+    $this['tentang'] = Blog::where('slug','tentang')->orderBy('id','desc')->first();
+}
+?>
+==
+<div class=""  data-aos="fade">
+    <div class="container-fluid">
+      
+      <div class="row justify-content-center">
+        <div class="col-md-7">
+          <div class="row mb-5 site-section">
+            <div class="col-12 ">
+              <h2 class="site-section-heading text-center">Tentang Decor Party Lahat</h2>
+            </div>
+          </div>
+
+            {% for tentang in tentang.posts %}
+                {% if loop.first %}
+                    <div class="row mb-5">
+                        <div class="col-md-7">
+                        {% for image in tentang.featured_images|slice(0,1) %}
+                          <img src="{{ image.path }}" alt="Images" class="img-fluid">
+                        {% endfor %}
+                        </div>
+                        <div class="col-md-4 ml-auto">
+                          <h3>{{ tentang.title }}</h3>
+                          <p>{{ tentang.content_html | raw}}</p>
+                        </div>
+                      </div>
+                {% endif %}
+            {% endfor %}
+          
+
+         
+          <div class="row site-section">
+          {% for cat in cats %}
+          
+              {% for galery in cat.galeries %}
+                   <div class="col-md-6 col-lg-6 col-xl-4 text-center mb-5">
+                       {% for image in galery.images%}
+                           {% if loop.first %}
+                              <img src="{{ image.path }}" alt="{{ galery.name }}" class="img-fluid w-50 rounded-circle mb-4">
+                            {% endif %}
+                       {% endfor %}
+                      <h2 class="text-black font-weight-light mb-4">{{ galery.name }}</h2>
+                      <p class="mb-4">{{ galery.description }}</p>
+                      <!-- <p>
+                        <a href="#" class="pl-0 pr-3"><span class="icon-twitter"></span></a>
+                        <a href="#" class="pl-3 pr-3"><span class="icon-instagram"></span></a>
+                        <a href="#" class="pl-3 pr-3"><span class="icon-facebook"></span></a>
+                      </p> -->
+                    </div>
+                {% endfor %}
+            
+          {% endfor %}
+           
+            
+            <!-- <div class="col-md-6 col-lg-6 col-xl-4 text-center mb-5">
+              <img src="{{ 'assets/images/person_2.jpg' | theme }}" alt="Image" class="img-fluid w-50 rounded-circle mb-4">
+              <h2 class="text-black font-weight-light mb-4">Claire Smith</h2>
+              <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur ab quas facilis obcaecati non ea, est odit repellat distinctio incidunt, quia aliquam eveniet quod deleniti impedit sapiente atque tenetur porro?</p>
+              <p>
+                <a href="#" class="pl-0 pr-3"><span class="icon-twitter"></span></a>
+                <a href="#" class="pl-3 pr-3"><span class="icon-instagram"></span></a>
+                <a href="#" class="pl-3 pr-3"><span class="icon-facebook"></span></a>
+              </p>
+            </div>
+            <div class="col-md-6 col-lg-6 col-xl-4 text-center mb-5">
+              <img src="{{ 'assets/images/person_4.jpg' | theme }}" alt="Image" class="img-fluid w-50 rounded-circle mb-4">
+              <h2 class="text-black font-weight-light mb-4">John Smith</h2>
+              <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur ab quas facilis obcaecati non ea, est odit repellat distinctio incidunt, quia aliquam eveniet quod deleniti impedit sapiente atque tenetur porro?</p>
+              <p>
+                <a href="#" class="pl-0 pr-3"><span class="icon-twitter"></span></a>
+                <a href="#" class="pl-3 pr-3"><span class="icon-instagram"></span></a>
+                <a href="#" class="pl-3 pr-3"><span class="icon-facebook"></span></a>
+              </p>
+            </div> -->
+            
+          </div>
+        </div>
+    
+      </div>
+    </div>
+  </div>

@@ -1,0 +1,111 @@
+title = "Beranda"
+url = "/"
+layout = "default"
+is_hidden = 0
+==
+<?php
+use Raviraj\Rjgallery\Models\Gallery;
+use Raviraj\Rjgallery\Models\Category;
+function onStart(){
+ $this['cats'] = Category::all();
+  $this['gals'] = Gallery::all();
+}
+?>
+==
+<div class="container-fluid" data-aos="fade" data-aos-delay="500">
+    <div class="swiper-container images-carousel">
+        <div class="swiper-wrapper">
+        
+        {#looping categories#}
+        {% for cat in cats %}
+                <div class="swiper-slide">
+                  <div class="image-wrap">
+                    <div class="image-info">
+                      <h2 class="mb-3">{{ cat.name }}</h2>
+                      <a href="galery/{{ cat.slug }}" class="btn btn-outline-white py-2 px-4">Lihat Selengkapnya</a>
+                    </div>
+                    {% for img in cat.galeries %}
+                        {% for image in img.images %}
+                            {% if loop.first %}
+                                <img src="{{ image.path }}" alt="{{ image.description }}">
+                            {% endif %}
+                        {% endfor %}
+                    {% endfor %}
+                  </div>
+                </div>            
+        {% endfor %}
+        {#end looping categories#}
+        
+          <div class="swiper-slide">
+            <div class="image-wrap">
+              <div class="image-info">
+                <h2 class="mb-3">Wedding Photography</h2>
+                <a href="single.html" class="btn btn-outline-white py-2 px-4">More Photos</a>
+              </div>
+              <img src="{{ 'assets/images/img_1.jpg' | theme }}" alt="Image">
+            </div>
+          </div>
+          
+          <div class="swiper-slide">
+            <div class="image-wrap">
+              <div class="image-info">
+                <h2 class="mb-3">Hantaran</h2>
+                <a href="single.html" class="btn btn-outline-white py-2 px-4">More Photos</a>
+              </div>
+              <img src="{{ 'assets/images/img_2.jpg' | theme }}" alt="Image">
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="image-wrap">
+              <div class="image-info">
+                <h2 class="mb-3">People</h2>
+                <a href="single.html" class="btn btn-outline-white py-2 px-4">More Photos</a>
+              </div>
+              <img src="{{ 'assets/images/img_3.jpg' | theme }}" alt="Image">
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="image-wrap">
+              <div class="image-info">
+                <h2 class="mb-3">Architecture</h2>
+                <a href="single.html" class="btn btn-outline-white py-2 px-4">More Photos</a>
+              </div>
+              <img src="{{ 'assets/images/img_4.jpg' | theme }}" alt="Image">
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="image-wrap">
+              <div class="image-info">
+                <h2 class="mb-3">Animals</h2>
+                <a href="single.html" class="btn btn-outline-white py-2 px-4">More Photos</a>
+              </div>
+              <img src="{{ 'assets/images/img_5.jpg' | theme }}" alt="Image">
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="image-wrap">
+              <div class="image-info">
+                <h2 class="mb-3">Sports</h2>
+                <a href="single.html" class="btn btn-outline-white py-2 px-4">More Photos</a>
+              </div>
+              <img src="{{ 'assets/images/img_6.jpg' | theme }}" alt="Image">
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="image-wrap">
+              <div class="image-info">
+                <h2 class="mb-3">Travel</h2>
+                <a href="single.html" class="btn btn-outline-white py-2 px-4">More Photos</a>
+              </div>
+              <img src="{{ 'assets/images/img_7.jpg' | theme }}" alt="Image">
+            </div>
+          </div>
+          
+        </div>
+
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-scrollbar"></div>
+    </div>
+  </div>
